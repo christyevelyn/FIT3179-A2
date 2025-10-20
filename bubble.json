@@ -31,7 +31,9 @@
       "as": "Total"
     },
     { "calculate": "' '", "as": "spacer" },
-    { "filter": "pComp == null || datum.Complication == pComp" }
+    { "filter": "filterComp == null || datum.Complication == filterComp" },
+    { "filter": "filterAge == null || datum['Age Group'] == filterAge" },
+    { "filter": "filterSex == null || datum.Sex == filterSex" }
   ],
     "params": [
       {
@@ -40,14 +42,32 @@
         "bind": "scales"
       },
       {
-        "name": "pComp",
+        "name": "filterComp",
         "value": null,
         "bind": {
           "input":"select",
           "name":"Complication: ",
           "options":[null,"Circulatory complication","Kidney complication","Eye complication","Neurological complication","Foot Ulcer","Hypoglycaemia","Hyperosmolarity","Ketoacidosis","Poor diabetes control"],
-          "labels": ["(All)","Circulatory","Kidney","Eye","Neurological","Foot Ulcer","Hypoglycaemia","Hyperosmolarity","Ketoacidosis","Poor Control"]}
-}
+          "labels": ["Show All","Circulatory","Kidney","Eye","Neurological","Foot Ulcer","Hypoglycaemia","Hyperosmolarity","Ketoacidosis","Poor Control"]}
+      },
+      {
+        "name": "filterAge",
+        "value": null,
+        "bind": {
+          "input":"select",
+          "name":"Age Group: ",
+          "options":[null,"0-24","25-49","50-74","75 and more"],
+          "labels": ["Show All","0-24","25-49","50-74","75+"]}
+      },
+      {
+        "name": "filterSex",
+        "value": null,
+        "bind": {
+          "input":"select",
+          "name":"Sex: ",
+          "options":[null,"Male","Female"],
+          "labels": ["Show All","Male","Female"]}
+      } 
     ],
   "layer": [
     {
@@ -56,7 +76,10 @@
         "x": {
           "field": "Type2Cases",
           "type": "quantitative",
-          "title": "Type 2 Diabetes Cases",
+          "axis": {
+            "title": "Type 2 Diabetes Cases",
+            "titlePadding": 15
+          },
           "scale": { "zero": true }
         },
         "y": {
