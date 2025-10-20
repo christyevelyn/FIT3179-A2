@@ -1,0 +1,217 @@
+Diabetes Type,Complication,Sex,Age Group,Number,Rate per 100k
+Type 1,Circulatory complication,Male,0-24,NA,NA
+Type 1,Circulatory complication,Male,25-49,409,9.3
+Type 1,Circulatory complication,Male,50-74,1849,53.5
+Type 1,Circulatory complication,Male,75 and more,397,45.5
+Type 1,Circulatory complication,Female,0-24,NA,NA
+Type 1,Circulatory complication,Female,25-49,416,9.3
+Type 1,Circulatory complication,Female,50-74,682,18.8
+Type 1,Circulatory complication,Female,75 and more,232,21.8
+Type 1,Circulatory complication,Persons,0-24,NA,NA
+Type 1,Circulatory complication,Persons,25-49,825,9.3
+Type 1,Circulatory complication,Persons,50-74,2531,35.7
+Type 1,Circulatory complication,Persons,75 and more,629,32.5
+Type 1,Eye complication,Male,0-24,35,0.9
+Type 1,Eye complication,Male,25-49,1481,33.5
+Type 1,Eye complication,Male,50-74,2783,80.5
+Type 1,Eye complication,Male,75 and more,769,88.2
+Type 1,Eye complication,Female,0-24,139,3.6
+Type 1,Eye complication,Female,25-49,1950,43.6
+Type 1,Eye complication,Female,50-74,2267,62.4
+Type 1,Eye complication,Female,75 and more,557,52.2
+Type 1,Eye complication,Persons,0-24,174,2.2
+Type 1,Eye complication,Persons,25-49,3431,38.6
+Type 1,Eye complication,Persons,50-74,5050,71.3
+Type 1,Eye complication,Persons,75 and more,1326,68.4
+Type 1,Foot ulcer,Male,0-24,7,0.2
+Type 1,Foot ulcer,Male,25-49,651,14.7
+Type 1,Foot ulcer,Male,50-74,1141,33.0
+Type 1,Foot ulcer,Male,75 and more,164,18.8
+Type 1,Foot ulcer,Female,0-24,9,0.2
+Type 1,Foot ulcer,Female,25-49,355,7.9
+Type 1,Foot ulcer,Female,50-74,465,12.8
+Type 1,Foot ulcer,Female,75 and more,71,6.7
+Type 1,Foot ulcer,Persons,0-24,16,0.2
+Type 1,Foot ulcer,Persons,25-49,1006,11.3
+Type 1,Foot ulcer,Persons,50-74,1606,22.7
+Type 1,Foot ulcer,Persons,75 and more,235,12.1
+Type 1,Hypoglycaemia,Male,0-24,525,13.0
+Type 1,Hypoglycaemia,Male,25-49,1094,24.7
+Type 1,Hypoglycaemia,Male,50-74,1432,41.4
+Type 1,Hypoglycaemia,Male,75 and more,469,53.8
+Type 1,Hypoglycaemia,Female,0-24,719,18.9
+Type 1,Hypoglycaemia,Female,25-49,1554,34.8
+Type 1,Hypoglycaemia,Female,50-74,1192,32.8
+Type 1,Hypoglycaemia,Female,75 and more,529,49.6
+Type 1,Hypoglycaemia,Persons,0-24,1244,15.8
+Type 1,Hypoglycaemia,Persons,25-49,2648,29.8
+Type 1,Hypoglycaemia,Persons,50-74,2624,37.0
+Type 1,Hypoglycaemia,Persons,75 and more,998,51.5
+Type 1,Hyperosmolarity,Male,0-24,34,0.8
+Type 1,Hyperosmolarity,Male,25-49,68,1.5
+Type 1,Hyperosmolarity,Male,50-74,103,3.0
+Type 1,Hyperosmolarity,Male,75 and more,26,3.0
+Type 1,Hyperosmolarity,Female,0-24,38,1.0
+Type 1,Hyperosmolarity,Female,25-49,55,1.2
+Type 1,Hyperosmolarity,Female,50-74,39,1.1
+Type 1,Hyperosmolarity,Female,75 and more,29,2.7
+Type 1,Hyperosmolarity,Persons,0-24,72,0.9
+Type 1,Hyperosmolarity,Persons,25-49,123,1.4
+Type 1,Hyperosmolarity,Persons,50-74,142,2.0
+Type 1,Hyperosmolarity,Persons,75 and more,55,2.8
+Type 1,Ketoacidosis,Male,0-24,1618,40.0
+Type 1,Ketoacidosis,Male,25-49,1739,39.3
+Type 1,Ketoacidosis,Male,50-74,922,26.7
+Type 1,Ketoacidosis,Male,75 and more,185,21.2
+Type 1,Ketoacidosis,Female,0-24,1951,51.2
+Type 1,Ketoacidosis,Female,25-49,1878,42.0
+Type 1,Ketoacidosis,Female,50-74,802,22.1
+Type 1,Ketoacidosis,Female,75 and more,335,31.4
+Type 1,Ketoacidosis,Persons,0-24,3569,45.4
+Type 1,Ketoacidosis,Persons,25-49,3617,40.7
+Type 1,Ketoacidosis,Persons,50-74,1724,24.3
+Type 1,Ketoacidosis,Persons,75 and more,520,26.8
+Type 1,Kidney complication,Male,0-24,163,4.0
+Type 1,Kidney complication,Male,25-49,1765,39.9
+Type 1,Kidney complication,Male,50-74,3143,91.0
+Type 1,Kidney complication,Male,75 and more,805,92.3
+Type 1,Kidney complication,Female,0-24,236,6.2
+Type 1,Kidney complication,Female,25-49,2226,49.8
+Type 1,Kidney complication,Female,50-74,2117,58.3
+Type 1,Kidney complication,Female,75 and more,870,81.6
+Type 1,Kidney complication,Persons,0-24,399,5.1
+Type 1,Kidney complication,Persons,25-49,3991,44.9
+Type 1,Kidney complication,Persons,50-74,5260,74.2
+Type 1,Kidney complication,Persons,75 and more,1675,86.4
+Type 1,Neurological complication,Male,0-24,84,2.1
+Type 1,Neurological complication,Male,25-49,1586,35.9
+Type 1,Neurological complication,Male,50-74,2555,73.9
+Type 1,Neurological complication,Male,75 and more,578,66.3
+Type 1,Neurological complication,Female,0-24,200,5.2
+Type 1,Neurological complication,Female,25-49,2012,45.0
+Type 1,Neurological complication,Female,50-74,1889,52.0
+Type 1,Neurological complication,Female,75 and more,435,40.8
+Type 1,Neurological complication,Persons,0-24,284,3.6
+Type 1,Neurological complication,Persons,25-49,3598,40.5
+Type 1,Neurological complication,Persons,50-74,4444,62.7
+Type 1,Neurological complication,Persons,75 and more,1013,52.3
+Type 1,Poor diabetes control,Male,0-24,687,17.0
+Type 1,Poor diabetes control,Male,25-49,1858,42.0
+Type 1,Poor diabetes control,Male,50-74,1831,53.0
+Type 1,Poor diabetes control,Male,75 and more,513,58.8
+Type 1,Poor diabetes control,Female,0-24,1118,29.3
+Type 1,Poor diabetes control,Female,25-49,2137,47.8
+Type 1,Poor diabetes control,Female,50-74,1379,38.0
+Type 1,Poor diabetes control,Female,75 and more,651,61.1
+Type 1,Poor diabetes control,Persons,0-24,1805,23.0
+Type 1,Poor diabetes control,Persons,25-49,3995,44.9
+Type 1,Poor diabetes control,Persons,50-74,3210,45.3
+Type 1,Poor diabetes control,Persons,75 and more,1164,60.1
+Type 2,Circulatory complication,Male,0-24,112,1.6
+Type 2,Circulatory complication,Male,25-49,4866,152.1
+Type 2,Circulatory complication,Male,50-74,29017,1263.5
+Type 2,Circulatory complication,Male,75 and more,14259,3043.8
+Type 2,Circulatory complication,Female,0-24,133,2.0
+Type 2,Circulatory complication,Female,25-49,2204,67.1
+Type 2,Circulatory complication,Female,50-74,8868,360.9
+Type 2,Circulatory complication,Female,75 and more,6542,1039.3
+Type 2,Circulatory complication,Persons,0-24,245,1.8
+Type 2,Circulatory complication,Persons,25-49,7070,109.0
+Type 2,Circulatory complication,Persons,50-74,37887,797.0
+Type 2,Circulatory complication,Persons,75 and more,20801,1894.6
+Type 2,Eye complication,Male,0-24,470,6.9
+Type 2,Eye complication,Male,25-49,7113,222.3
+Type 2,Eye complication,Male,50-74,34658,1509.2
+Type 2,Eye complication,Male,75 and more,11343,2421.2
+Type 2,Eye complication,Female,0-24,560,8.5
+Type 2,Eye complication,Female,25-49,5541,168.6
+Type 2,Eye complication,Female,50-74,26335,1071.7
+Type 2,Eye complication,Female,75 and more,9803,1557.3
+Type 2,Eye complication,Persons,0-24,1037,7.7
+Type 2,Eye complication,Persons,25-49,12654,195.1
+Type 2,Eye complication,Persons,50-74,60996,1283.1
+Type 2,Eye complication,Persons,75 and more,21146,1926.0
+Type 2,Foot ulcer,Male,0-24,361,5.3
+Type 2,Foot ulcer,Male,25-49,5433,169.8
+Type 2,Foot ulcer,Male,50-74,14431,628.4
+Type 2,Foot ulcer,Male,75 and more,5126,1094.2
+Type 2,Foot ulcer,Female,0-24,251,3.8
+Type 2,Foot ulcer,Female,25-49,2099,63.9
+Type 2,Foot ulcer,Female,50-74,4199,170.9
+Type 2,Foot ulcer,Female,75 and more,1984,315.2
+Type 2,Foot ulcer,Persons,0-24,620,4.6
+Type 2,Foot ulcer,Persons,25-49,7532,116.1
+Type 2,Foot ulcer,Persons,50-74,18630,391.9
+Type 2,Foot ulcer,Persons,75 and more,7110,647.6
+Type 2,Hypoglycaemia,Male,0-24,194,2.8
+Type 2,Hypoglycaemia,Male,25-49,2089,65.3
+Type 2,Hypoglycaemia,Male,50-74,9246,402.6
+Type 2,Hypoglycaemia,Male,75 and more,5104,1089.5
+Type 2,Hypoglycaemia,Female,0-24,460,7.0
+Type 2,Hypoglycaemia,Female,25-49,1633,49.7
+Type 2,Hypoglycaemia,Female,50-74,6118,249.0
+Type 2,Hypoglycaemia,Female,75 and more,4601,730.9
+Type 2,Hypoglycaemia,Persons,0-24,654,4.9
+Type 2,Hypoglycaemia,Persons,25-49,3722,57.4
+Type 2,Hypoglycaemia,Persons,50-74,15364,323.2
+Type 2,Hypoglycaemia,Persons,75 and more,9705,883.9
+Type 2,Hyperosmolarity,Male,0-24,95,1.4
+Type 2,Hyperosmolarity,Male,25-49,558,17.4
+Type 2,Hyperosmolarity,Male,50-74,1944,84.7
+Type 2,Hyperosmolarity,Male,75 and more,1560,333.0
+Type 2,Hyperosmolarity,Female,0-24,44,0.7
+Type 2,Hyperosmolarity,Female,25-49,318,9.7
+Type 2,Hyperosmolarity,Female,50-74,1107,45.1
+Type 2,Hyperosmolarity,Female,75 and more,1200,190.6
+Type 2,Hyperosmolarity,Persons,0-24,139,1.0
+Type 2,Hyperosmolarity,Persons,25-49,877,13.5
+Type 2,Hyperosmolarity,Persons,50-74,3051,64.2
+Type 2,Hyperosmolarity,Persons,75 and more,2760,251.4
+Type 2,Ketoacidosis,Male,0-24,273,4.0
+Type 2,Ketoacidosis,Male,25-49,1324,41.4
+Type 2,Ketoacidosis,Male,50-74,2942,128.1
+Type 2,Ketoacidosis,Male,75 and more,877,187.2
+Type 2,Ketoacidosis,Female,0-24,232,3.5
+Type 2,Ketoacidosis,Female,25-49,994,30.2
+Type 2,Ketoacidosis,Female,50-74,1790,72.8
+Type 2,Ketoacidosis,Female,75 and more,847,134.6
+Type 2,Ketoacidosis,Persons,0-24,505,3.8
+Type 2,Ketoacidosis,Persons,25-49,2319,35.8
+Type 2,Ketoacidosis,Persons,50-74,4733,99.6
+Type 2,Ketoacidosis,Persons,75 and more,1724,157.0
+Type 2,Kidney complication,Male,0-24,1435,21.0
+Type 2,Kidney complication,Male,25-49,17482,546.4
+Type 2,Kidney complication,Male,50-74,72110,3140.0
+Type 2,Kidney complication,Male,75 and more,47060,10045.7
+Type 2,Kidney complication,Female,0-24,1762,26.7
+Type 2,Kidney complication,Female,25-49,16095,489.8
+Type 2,Kidney complication,Female,50-74,46816,1905.2
+Type 2,Kidney complication,Female,75 and more,37492,5956.1
+Type 2,Kidney complication,Persons,0-24,3198,23.8
+Type 2,Kidney complication,Persons,25-49,33578,517.7
+Type 2,Kidney complication,Persons,50-74,118927,2501.8
+Type 2,Kidney complication,Persons,75 and more,84553,7701.1
+Type 2,Neurological complication,Male,0-24,462,6.8
+Type 2,Neurological complication,Male,25-49,8182,255.7
+Type 2,Neurological complication,Male,50-74,30905,1345.8
+Type 2,Neurological complication,Male,75 and more,12344,2635.0
+Type 2,Neurological complication,Female,0-24,500,7.6
+Type 2,Neurological complication,Female,25-49,5239,159.4
+Type 2,Neurological complication,Female,50-74,15309,623.0
+Type 2,Neurological complication,Female,75 and more,8429,1339.1
+Type 2,Neurological complication,Persons,0-24,964,7.2
+Type 2,Neurological complication,Persons,25-49,13421,206.9
+Type 2,Neurological complication,Persons,50-74,46214,972.2
+Type 2,Neurological complication,Persons,75 and more,20773,1892.0
+Type 2,Poor diabetes control,Male,0-24,1258,18.4
+Type 2,Poor diabetes control,Male,25-49,8741,273.2
+Type 2,Poor diabetes control,Male,50-74,17560,764.7
+Type 2,Poor diabetes control,Male,75 and more,6430,1372.6
+Type 2,Poor diabetes control,Female,0-24,2124,32.1
+Type 2,Poor diabetes control,Female,25-49,6235,189.7
+Type 2,Poor diabetes control,Female,50-74,11133,453.1
+Type 2,Poor diabetes control,Female,75 and more,5539,879.9
+Type 2,Poor diabetes control,Persons,0-24,3385,25.2
+Type 2,Poor diabetes control,Persons,25-49,14976,230.9
+Type 2,Poor diabetes control,Persons,50-74,28692,603.6
+Type 2,Poor diabetes control,Persons,75 and more,11969,1090.1
