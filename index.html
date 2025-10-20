@@ -10,6 +10,9 @@
     integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 </head>
 
@@ -28,9 +31,9 @@
                 <section class="card">
                     <h2>Cases by State</h2>
                     <p class="caption">  
-                        This map shows the distribution of cases across states.
-                        Each state is coloured based on the different number of prevalence.
+                        This map shows how diabetes prevalence differs across Australian states, with darker shades representing higher proportions of affected residents. 
                     </p>
+                    <p class="note">* Click on a <b>state</b> to highlight it.</p>
                     <div id="choropleth" class="vis-container"></div>
                 </section>
             </div>
@@ -41,9 +44,9 @@
                 <section class="card">
                     <h2>Change Over Time</h2>
                     <p class="caption">
-                        Shows how totals shift across years by region. 
-                        <br>Hover to read values at specific years.
+                        Tracks how diabetes cases shifted across states over time, revealing patterns of steady growth and regional differences in disease trends.
                     </p>
+                    <p class="note">* Click on <b>colored area</b> or <b>legend item</b> to highlight specific states.</p>
                     <div id="streamgraph" class="vis-container"></div>
                 </section>
             </div>
@@ -52,10 +55,9 @@
                 <section class="card">
                     <h2>Cases by Age Group & Sex</h2>
                     <p class="caption">
-                        Highlights differences across age groups between males and females, indicating which bands carry the highest burden.
-                        <br>Hover for exact counts, toggle legend entries to compare category.
-                        
+                        Compares the burden of diabetes between <span style="color:#4575b4; font-weight: 700;">males</span> and <span style="color: #d73027; font-weight: 700;">females</span> across different age groups, illustrating which demographics has the highest risk.
                     </p>
+                    <p class="note">* Click on a <b>bar</b> to highlight the selected sex across all age groups.</p>
                     <div id="groupBar" class="vis-container"></div>
                 </section>
             </div>
@@ -66,9 +68,9 @@
                 <section class="card">
                     <h2>Lifestyle Risk Factors</h2>
                     <p class="caption">
-                        Tracks alcohol consumption, daily smoking, low fruit/vegetable intake, physical inactivity, and obesity by state.
-                        <br>Hover to compare states, select legend entries to isolate a line.
+                        Shows how lifestyle factors (alcohol consumption, daily smoking, physical inactivity) vary by state and contribute to diabetes risk nationwide.
                     </p>
+                    <p class="note">* Click <b>legend</b> or <b>dot points</b> to highlight specific regions</p>
                     <div id="line" class="vis-container"></div>
                 </section>
             </div>
@@ -79,9 +81,9 @@
                 <section class="card">
                     <h2>Complications by Diabetes Types</h2>
                     <p class="caption">
-                        Complications differ between Type 1 and Type 2 diabetes.
-
+                        Explores major health complications associated with Type 1 and Type 2 diabetes, such as circulatory, kidney, and eye conditions, visualising their number of cases.
                     </p>
+                    <p class="note">* Use the <b>dropdown menus</b> below to filter by complication type, age group, or sex</p>
                     <div id="bubble" class="vis-container"></div>
                 </section>
             </div>
@@ -112,9 +114,10 @@
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
-        vegaEmbed('#bubble', bubble, { "actions": false }).then(function (result) {
+        vegaEmbed('#bubble', bubble, { "actions": false, renderer:'svg' }).then(function (result) {
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
+
 
     </script>
 </body>
