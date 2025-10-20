@@ -13,15 +13,22 @@
         "lookup": "properties.STE_NAME16",
         "from": {
         "data": {
-            "url": "https://raw.githubusercontent.com/christyevelyn/FIT3179/ba02d6a769b058ed6058f66695b34b58cf189ed0/au_health_proportion.csv"
+            "url": "https://raw.githubusercontent.com/christyevelyn/FIT3179-A2/main/data/au_health.csv"
         },
-        "key": "StateFull",
-        "fields": ["Diabetes mellitus(f)"]
+        "key": "State",
+        "fields": ["Diabetes mellitus(f)", "Diabetes mellitus(f) Number"]
         }
     }
     ],
     "layer": [
     {
+        "params": [
+          {
+            "name": "highlight",
+            "select": {"type": "point", "on": "mouseover"}
+          },
+          {"name": "select", "select": "point"}
+        ],
         "mark": {
             "type": "geoshape",
             "stroke": "black",
@@ -44,9 +51,23 @@
             {
             "field": "Diabetes mellitus(f)",
             "type": "quantitative",
+            "title": "Diabetes prevalence (%)"
+            },
+            {
+            "field": "Diabetes mellitus(f) Number",
+            "type": "quantitative",
             "title": "Estimated cases ('000)"
             }
-        ]
+        ],
+        "opacity": {
+          "condition": [
+            {
+              "param": "select",
+              "value": 1
+            }
+          ],
+          "value": 0.3
+        }
       }
     },
     {
@@ -68,7 +89,7 @@
         "fontWeight": 900,
         "align": "center",
         "baseline": "middle",
-        "fill": "#ffc1b0"
+        "fill": "#ffa556"
       },
       "encoding": {
         "longitude": {"field": "lon", "type": "quantitative"},
@@ -93,16 +114,16 @@
         {
           "lookup": "state",
           "from": {
-            "data": {"url": "https://raw.githubusercontent.com/christyevelyn/FIT3179/ba02d6a769b058ed6058f66695b34b58cf189ed0/au_health_proportion.csv"},
-            "key": "StateFull",
-            "fields": ["Diabetes mellitus(f)"]
+            "data": {"url": "https://raw.githubusercontent.com/christyevelyn/FIT3179-A2/main/data/au_health.csv"},
+            "key": "State",
+            "fields": ["Diabetes mellitus(f)", "Diabetes mellitus(f) Number"]
           }
         }
       ],
       "mark": {
         "type":"circle", 
         "size": 60, 
-        "fill": "#ffa788"
+        "fill": "#ffa556"
       },
       "encoding": {
         "longitude": {"field":"lon","type":"quantitative"},
@@ -111,6 +132,11 @@
             {"field": "state", "title": "State"},
             {
             "field": "Diabetes mellitus(f)",
+            "type": "quantitative",
+            "title": "Diabetes prevalence (%)"
+            },
+            {
+            "field": "Diabetes mellitus(f) Number",
             "type": "quantitative",
             "title": "Estimated cases ('000)"
             }

@@ -16,7 +16,20 @@
     "layer": [
     {
         "mark": "bar",
+        "params": [
+            {"name":"filterSel",
+            "select":{
+            "type":"point",
+            "fields":["Sex", "Age Group"]
+            }}
+        ],
         "encoding": {
+        "opacity": {
+            "condition":{
+                "param":"filterSel",
+                "value":1
+            }, 
+            "value":0.10},
         "x": {
             "field": "Age group",
             "type": "ordinal",
