@@ -34,7 +34,17 @@
         "point": {"filled": true, "size": 100}
       },
       "params": [
-        {"name":"stateSel","select":{"type":"point","fields":["State"]},"bind":"legend"}
+        {"name":"stateSel",
+        "select":{
+          "type":"point",
+          "fields":["State"]
+        },
+          "bind":"legend"},
+        {"name":"stateSel",
+        "select":{
+          "type":"point",
+          "fields":["State"]
+        }}
       ],
       "encoding": {
         "color": {"type": "nominal", "field": "State"},

@@ -15,7 +15,17 @@
   ],
   "mark": "area",
   "params": [
-    {"name":"stateSel","select":{"type":"point","fields":["State"]},"bind":"legend"}
+    {"name":"stateSel",
+    "select":{
+      "type":"point",
+      "fields":["State"]
+    },
+      "bind":"legend"},
+    {"name":"stateSel",
+    "select":{
+      "type":"point",
+      "fields":["State"]
+    }}
   ],
   "encoding": {
     "x": {
