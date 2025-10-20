@@ -1,0 +1,121 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 1000,
+    "height": 500,
+    "background": "#e8f1fa",
+    "projection": {"type": "mercator"},
+    "data": {
+    "url": "https://raw.githubusercontent.com/christyevelyn/FIT3179/main/STE_2016_AUST-2.json",
+    "format": {"type": "topojson", "feature": "STE_2016_AUST"}
+    },
+    "transform": [
+    {
+        "lookup": "properties.STE_NAME16",
+        "from": {
+        "data": {
+            "url": "https://raw.githubusercontent.com/christyevelyn/FIT3179/ba02d6a769b058ed6058f66695b34b58cf189ed0/au_health_proportion.csv"
+        },
+        "key": "StateFull",
+        "fields": ["Diabetes mellitus(f)"]
+        }
+    }
+    ],
+    "layer": [
+    {
+        "mark": {
+            "type": "geoshape",
+            "stroke": "black",
+            "strokeWidth": 0.8
+        },
+        "encoding": {
+        "color": {
+            "field": "Diabetes mellitus(f)",
+            "type": "quantitative",
+            "legend": {
+              "title": "Diabetes Prevalence (%)",
+              "orient": "right",
+              "offset": -150,
+              "padding": 50
+            },
+            "scale": {"type": "log"}
+        },
+        "tooltip": [
+            {"field": "properties.STE_NAME16", "title": "State"},
+            {
+            "field": "Diabetes mellitus(f)",
+            "type": "quantitative",
+            "title": "Estimated cases ('000)"
+            }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"state":"Western Australia", "lon":122.0, "lat":-26.0},
+          {"state":"Northern Territory","lon":133.5, "lat":-20.0},
+          {"state":"South Australia",   "lon":135.5, "lat":-30.0},
+          {"state":"Queensland",        "lon":144.0, "lat":-23.5},
+          {"state":"New South Wales",   "lon":147.0, "lat":-32.0},
+          {"state":"Victoria",          "lon":144.5, "lat":-36.0},
+          {"state":"Tasmania",          "lon":146.8, "lat":-41.0},
+          {"state":"Australian Capital Territory","lon":149.1,"lat":-34.5}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": 900,
+        "align": "center",
+        "baseline": "middle",
+        "fill": "#ffc1b0"
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude":  {"field": "lat", "type": "quantitative"},
+        "text":      {"field": "state"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"state":"Western Australia", "lon":122.0, "lat":-27.0},
+          {"state":"Northern Territory","lon":133.5, "lat":-21.0},
+          {"state":"South Australia",   "lon":135.5, "lat":-31.0},
+          {"state":"Queensland",        "lon":144.0, "lat":-24.5},
+          {"state":"New South Wales",   "lon":147.0, "lat":-33.0},
+          {"state":"Victoria",          "lon":144.5, "lat":-37.0},
+          {"state":"Tasmania",          "lon":146.8, "lat":-42.0},
+          {"state":"Australian Capital Territory","lon":149.1,"lat":-35.5}
+        ]
+      },
+      "transform": [
+        {
+          "lookup": "state",
+          "from": {
+            "data": {"url": "https://raw.githubusercontent.com/christyevelyn/FIT3179/ba02d6a769b058ed6058f66695b34b58cf189ed0/au_health_proportion.csv"},
+            "key": "StateFull",
+            "fields": ["Diabetes mellitus(f)"]
+          }
+        }
+      ],
+      "mark": {
+        "type":"circle", 
+        "size": 60, 
+        "fill": "#ffa788"
+      },
+      "encoding": {
+        "longitude": {"field":"lon","type":"quantitative"},
+        "latitude":  {"field":"lat","type":"quantitative"},
+        "tooltip": [
+            {"field": "state", "title": "State"},
+            {
+            "field": "Diabetes mellitus(f)",
+            "type": "quantitative",
+            "title": "Estimated cases ('000)"
+            }
+        ]
+      }
+    }
+  ]
+}
