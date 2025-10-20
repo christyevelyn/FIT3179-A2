@@ -1,0 +1,107 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/christyevelyn/FIT3179-A2/main/data/diabetes_complication.csv"
+  },
+  "width": 900,
+  "height": 450,
+  "background": "#e8f1fa",
+  "transform": [
+    {
+      "aggregate": [
+        {"op": "sum", "field": "Number", "as": "total_cases"}
+      ],
+      "groupby": ["Complication", "Diabetes Type", "Age Group", "Sex"]
+    },
+    {
+      "pivot": "Diabetes Type",
+      "value": "total_cases",
+      "groupby": ["Complication", "Age Group", "Sex"]
+    },
+    {
+      "calculate": "datum['Type 2']",
+      "as": "Type2Cases"
+    },
+    {
+      "calculate": "datum['Type 1']",
+      "as": "Type1Cases"
+    },
+    {
+      "calculate": "datum.Type1Cases + datum.Type2Cases",
+      "as": "Total"
+    },
+    { "calculate": "' '", "as": "spacer" },
+    { "filter": "pComp == null || datum.Complication == pComp" }
+  ],
+    "params": [
+      {
+        "name": "view",
+        "select": "interval",
+        "bind": "scales"
+      },
+      {
+        "name": "pComp",
+        "value": null,
+        "bind": {
+          "input":"select",
+          "name":"Complication: ",
+          "options":[null,"Circulatory complication","Kidney complication","Eye complication","Neurological complication","Foot Ulcer","Hypoglycaemia","Hyperosmolarity","Ketoacidosis","Poor diabetes control"],
+          "labels": ["(All)","Circulatory","Kidney","Eye","Neurological","Foot Ulcer","Hypoglycaemia","Hyperosmolarity","Ketoacidosis","Poor Control"]}
+}
+    ],
+  "layer": [
+    {
+      "mark": { "type": "circle", "opacity": 0.8 },
+      "encoding": {
+        "x": {
+          "field": "Type2Cases",
+          "type": "quantitative",
+          "title": "Type 2 Diabetes Cases",
+          "scale": { "zero": true }
+        },
+        "y": {
+          "field": "Type1Cases",
+          "type": "quantitative",
+          "title": "Type 1 Diabetes Cases",
+          "scale": { "zero": true }
+        },
+        "size": {
+          "field": "Total",
+          "type": "quantitative",
+          "title": "Total Cases"
+        },
+        "color": {
+          "field": "Complication",
+          "type": "nominal",
+          "title": "Complication",
+          "scale": {
+            "scheme": "dark2",
+            "domain": [
+            "Circulatory complication",
+            "Kidney complication",
+            "Eye complication",
+            "Neurological complication",
+            "Foot Ulcer",
+            "Hypoglycaemia",
+            "Hyperosmolarity",
+            "Ketoacidosis",
+            "Poor diabetes control"
+            ]}
+        },
+        "tooltip": [
+          { "field": "Complication" },
+          { "field": "Age Group" },
+          { "field": "Sex", "title": "Sex"},
+          { "field": "spacer", "title": " "},
+          { "field": "Type1Cases", "title": "Type 1 cases", "format": ","},
+          { "field": "Type2Cases", "title": "Type 2 cases", "format": ","},
+          { "field": "Total", "title": "Total cases", "format": "," }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": { "stroke": null },
+    "legend": { "orient": "right" }
+  }
+}
