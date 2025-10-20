@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes in Australia</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <!-- <link rel="stylesheet"
+      href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+</head>
+
+<body>
+    <div class="page">
+        <div class="header">
+            <h1>Diabetes in Australia</h1>
+            <p>
+                Diabetes is one of the most common chronic health conditions in Australia.<br>
+                It affects people across all ages and regions, leading to significant health and social impacts nationwide.
+            </p>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1">
+                <section class="card">
+                    <h2>Cases by State</h2>
+                    <p class="caption">  
+                        This map shows the distribution of cases across states.
+                        Each state is coloured based on the different number of prevalence.
+                    </p>
+                    <div id="choropleth" class="vis-container"></div>
+                </section>
+            </div>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1-2 pure-u-md-1-2">
+                <section class="card">
+                    <h2>Change Over Time</h2>
+                    <p class="caption">
+                        Shows how totals shift across years by region. 
+                        <br>Hover to read values at specific years.
+                    </p>
+                    <div id="streamgraph" class="vis-container"></div>
+                </section>
+            </div>
+
+            <div class="pure-u-1-2 pure-u-md-1-2">
+                <section class="card">
+                    <h2>Cases by Age Group & Sex</h2>
+                    <p class="caption">
+                        Highlights differences across age groups between males and females, indicating which bands carry the highest burden.
+                        <br>Hover for exact counts, toggle legend entries to compare category.
+                        
+                    </p>
+                    <div id="groupBar" class="vis-container"></div>
+                </section>
+            </div>
+        </div>
+
+         <div class="pure-g">
+            <div class="pure-u-1">
+                <section class="card">
+                    <h2>Lifestyle Risk Factors</h2>
+                    <p class="caption">
+                        Tracks alcohol consumption, daily smoking, low fruit/vegetable intake, physical inactivity, and obesity by state.
+                        <br>Hover to compare states, select legend entries to isolate a line.
+                    </p>
+                    <div id="line" class="vis-container"></div>
+                </section>
+            </div>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1">
+                <div id="bubble" class="vis-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var choropleth = "./choropleth.json";
+        var groupBar = "./group_bar.json";
+        var streamgraph = "./streamgraph.json"
+        var line = "./line.json"
+        var bubble = "./bubble.json"
+
+        vegaEmbed('#choropleth', choropleth, { "actions": false }).then(function (result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+
+        vegaEmbed('#groupBar', groupBar, { "actions": false }).then(function (result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#streamgraph', streamgraph, { "actions": false }).then(function (result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#line', line, { "actions": false }).then(function (result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#bubble', bubble, { "actions": false }).then(function (result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+    </script>
+</body>
+
+</html>
