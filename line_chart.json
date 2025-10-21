@@ -69,7 +69,7 @@
           "labelBaseline": "middle",
           "labelAlign": "center",
           "labelPadding": 10,
-          "labelExpr": "({'Alcohol consumption 2009 NHMRC guidelines (exceeded lifetime risk)':'Alcohol 2009 (exceeded)','Alcohol consumption 2020 guideline (exceeded guideline)':'Alcohol 2020 (exceeded)','Daily consumption of fruit and vegetables (did not meet recommendation)':'Low fruit/veg','High / Very High psychological distress':'High psych distress','Physical activity guidelines (did not meet guideline)':'Inactive physical activity','Current daily smoker':'Daily smoker','Total Overweight / Obese':'Overweight / Obese'}[datum.label] || datum.label)"
+          "labelExpr": "({'Alcohol consumption 2009 NHMRC guidelines (exceeded lifetime risk)':'Alcohol 2009 (exceeded)','Alcohol consumption 2020 guideline (exceeded guideline)':'Alcohol 2020 (exceeded)','Daily consumption of fruit and vegetables (did not meet recommendation)':'Low fruit/veg','High / Very High psychological distress':'High psych distress','Physical activity guidelines (did not meet guideline)':'Physical inactivity','Current daily smoker':'Daily smoker','Total Overweight / Obese':'Overweight / Obese'}[datum.label] || datum.label)"
         }
         },
         "y": {

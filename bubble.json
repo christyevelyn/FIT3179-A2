@@ -47,8 +47,8 @@
         "bind": {
           "input":"select",
           "name":"Complication: ",
-          "options":[null,"Circulatory complication","Kidney complication","Eye complication","Neurological complication","Foot Ulcer","Hypoglycaemia","Hyperosmolarity","Ketoacidosis","Poor diabetes control"],
-          "labels": ["Show All","Circulatory","Kidney","Eye","Neurological","Foot Ulcer","Hypoglycaemia","Hyperosmolarity","Ketoacidosis","Poor Control"]}
+          "options":[null,"Circulatory complication","Kidney complication","Eye complication","Neurological complication","Foot ulcer","Hypoglycaemia","Hyperosmolarity","Ketoacidosis","Poor diabetes control"],
+          "labels": ["Show All","Circulatory","Kidney","Eye","Neurological","Foot ulcer","Hypoglycaemia","Hyperosmolarity","Ketoacidosis","Poor Control"]}
       },
       {
         "name": "filterAge",
@@ -104,7 +104,7 @@
             "Kidney complication",
             "Eye complication",
             "Neurological complication",
-            "Foot Ulcer",
+            "Foot ulcer",
             "Hypoglycaemia",
             "Hyperosmolarity",
             "Ketoacidosis",

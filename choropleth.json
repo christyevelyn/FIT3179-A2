@@ -89,7 +89,7 @@
         "fontWeight": 900,
         "align": "center",
         "baseline": "middle",
-        "fill": "#ffa556"
+        "fill": "#ffaa8e"
       },
       "encoding": {
         "longitude": {"field": "lon", "type": "quantitative"},
@@ -123,7 +123,7 @@
       "mark": {
         "type":"circle", 
         "size": 60, 
-        "fill": "#ffa556"
+        "fill": "#ffaa8e"
       },
       "encoding": {
         "longitude": {"field":"lon","type":"quantitative"},

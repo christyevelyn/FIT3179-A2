@@ -67,7 +67,7 @@
             "field": "Sex",
             "type": "nominal",
             "title": "Sex",
-            "scale": {"range": ["#4575b4", "#d73027"]},
+            "scale": {"range": ["#305483", "#cd2c23"]},
             "sort": ["Males", "Females"]
         },
         "xOffset": {"field": "Sex", "sort": ["Males", "Females"]},
