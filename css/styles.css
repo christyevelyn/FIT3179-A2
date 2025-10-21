@@ -2,7 +2,7 @@
 .page {
     /* width: min(100%, 1200px); */
     background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
-    url("../background.jpg");
+    url("../image/background.jpg");
     margin: 0 auto;
     padding: 30px;
     padding-top: 35px;
@@ -48,10 +48,16 @@
 }
 
 .card p.caption{
-    margin-top: 5px;
+    margin-top: 10px;
     margin-bottom: 10px;
     background: #e8f1fa;
     font-family: "IBM Plex Sans", sans-serif;
+}
+
+.card p.note{
+    font-style: italic;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 13px;
 }
 
 .vis-container {
