@@ -72,3 +72,7 @@
     margin-top: 10px;
     font-family: "IBM Plex Sans", sans-serif;
 }
+
+.footer section{
+    padding: 5px;
+}
