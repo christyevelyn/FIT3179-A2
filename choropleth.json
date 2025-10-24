@@ -18,7 +18,8 @@
         "key": "State",
         "fields": ["Diabetes mellitus(f)", "Diabetes mellitus(f) Number"]
         }
-    }
+    },
+    {"calculate": "datum.properties.STE_NAME16", "as": "State"}
     ],
     "layer": [
     {
@@ -27,7 +28,11 @@
             "name": "highlight",
             "select": {"type": "point", "on": "mouseover"}
           },
-          {"name": "select", "select": "point"}
+          {"name": "select", "select": "point"},
+          {
+            "name": "state_filter",
+            "select": {"type": "point", "fields": ["State"]} 
+          }
         ],
         "mark": {
             "type": "geoshape",
