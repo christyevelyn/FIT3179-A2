@@ -29,7 +29,7 @@
         <div class="pure-g">
             <div class="pure-u-1">
                 <section class="card">
-                    <h2>Cases by State</h2>
+                    <h2>Prevalence by State</h2>
                     <p class="caption">  
                         This map shows how diabetes prevalence differs across Australian states. Darker shades representing higher proportions of affected residents, 
                         <br> showing that <span style="color: #4c78a8; font-weight: 700;">South Australia</span> has the highest prevalence rate 
@@ -44,7 +44,7 @@
         <div class="pure-g">
             <div class="pure-u-1-2 pure-u-md-1-2">
                 <section class="card">
-                    <h2>Change Over Time</h2>
+                    <h2>Prevalence Changes Over Time</h2>
                     <p class="caption">
                         Tracks how diabetes prevalence shifted across states over time from 2007 until 2022. 
                         The steady increase across all regions highlights the rising burden of diabetes, with some states growing faster than others.
@@ -62,8 +62,8 @@
                         Compares diabetes cases between <span style="color:#305483; font-weight: 700;">males</span> and <span style="color: #cd2c23; font-weight: 700;">females</span> across different age groups, illustrating which demographics has the highest risk.
                         The data shows a sharp rise in cases among middle-aged and older adults, particularly between 55 until 74 years, where both sexes experience the highest burden. 
                     </p>
-                    <p class="note">* Click on a <b>bar</b> to highlight the selected sex across all age groups</p>
-                    <div id="groupBar" class="vis-container"></div>
+                    <p class="note">* Click on a <b>bar</b> to highlight the selected bar</p>
+                    <div id="divergingBar" class="vis-container"></div>
                 </section>
             </div>
         </div>
@@ -71,13 +71,13 @@
          <div class="pure-g">
             <div class="pure-u-1">
                 <section class="card">
-                    <h2>Lifestyle Risk Factors</h2>
+                    <h2>Lifestyle Risk Factors Based on States</h2>
                     <p class="caption">
                         Explores how lifestyle factors, such as alcohol consumption, daily smoking, physical inactivity, and obesity, vary by states.
-                        <br>It emphasises that physical inactivity and obesity remain the most prevalent risk factors nationwide, contributing significantly to diabetes incidence. 
+                        <br>The crossing lines reveal strong variation between states, with no single factor uniformly high across all
                     </p>
                     <p class="note">* Click <b>legend labels</b> or <b>dot points</b> to highlight specific regions</p>
-                    <div id="line" class="vis-container"></div>
+                    <div id="parallelCoordinate" class="vis-container"></div>
                 </section>
             </div>
         </div>
@@ -99,10 +99,9 @@
 
     <script type="text/javascript">
         var choropleth = "./choropleth.json";
-        var groupBar = "./group_bar.json";
+        var divergingBar = "./diverging_bar.json";
         var streamgraph = "./streamgraph.json"
-        var line = "./line_chart.json"
-        // var isotype = "./isotype.json"
+        var parallelCoordinate = "./parallel_coordinate.json"
         var bubble = "./bubble.json"
 
         vegaEmbed('#choropleth', choropleth, { "actions": false }).then(function (result) {
@@ -110,7 +109,7 @@
         }).catch(console.error);
 
 
-        vegaEmbed('#groupBar', groupBar, { "actions": false }).then(function (result) {
+        vegaEmbed('#divergingBar', divergingBar, { "actions": false }).then(function (result) {
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
@@ -118,7 +117,7 @@
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
-        vegaEmbed('#line', line, { "actions": false }).then(function (result) {
+        vegaEmbed('#parallelCoordinate', parallelCoordinate, { "actions": false }).then(function (result) {
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
