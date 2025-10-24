@@ -1,0 +1,86 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "data": { "url": "https://raw.githubusercontent.com/christyevelyn/FIT3179-A2/main/data/AIHW-CVD-96-Diabetes-facts-data-tables-12122024.csv"},
+  "transform": [
+    {
+        "calculate": "toNumber(replace(datum.Cases, /[, ]/g, ''))",
+        "as": "CasesNum"
+    },
+    {"calculate": "datum.Sex == 'Males' ? -datum.CasesNum : datum.CasesNum", "as": "CasesSigned"}
+  ],
+  "width": 400,
+  "height": 385,
+  "background": "#e8f1fa",
+  "layer":[
+    {
+    "mark": "bar",
+    "params": [
+            {"name":"filterSel",
+            "select":{
+            "type":"point",
+            "fields":["Sex", "Age group"]
+            }}
+        ],
+    "encoding": {
+        "opacity": {
+            "condition":{
+                "param":"filterSel",
+                "value":1
+            }, 
+            "value":0.10},
+        "y": {
+        "field": "Age group",
+        "type": "ordinal",
+        "axis": {"title": "Age Group", "labelPadding": 6},
+        "sort": [
+        "0-4",
+        "5-9",
+        "10-14",
+        "15-19",
+        "20-24",
+        "25-29",
+        "30-34",
+        "35-39",
+        "40-44",
+        "45-49",
+        "50-54",
+        "55-59",
+        "60-64",
+        "65-69",
+        "70-74",
+        "75-79",
+        "80-84",
+        "More than 85"
+        ],
+        "scale": {"reverse": true}
+        },
+        "x": {
+        "field": "CasesSigned",
+        "type": "quantitative",
+        "title": "Number of Cases",
+        "axis": {"labelExpr": "abs(datum.value)"}
+        },
+        "color": {
+        "field": "Sex",
+        "type": "nominal",
+        "title": "Sex",
+        "scale": {"range": ["#305483", "#cd2c23"]},
+        "sort": ["Males", "Females"]
+        },
+        "tooltip": [
+        {"field": "Age group", "title": "Age Group"},
+        {"field": "Sex", "title": "Sex"},
+        {
+        "field": "Cases",
+        "type": "quantitative",
+        "title": "Number of cases"
+        }
+        ]
+    }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": false}
+  }
+}
