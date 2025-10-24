@@ -1,0 +1,115 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/christyevelyn/FIT3179-A2/main/data/au_health.csv"
+  },
+  "width": 950,
+  "height": 300,
+  "background": "#e8f1fa",
+  "transform": [
+    {
+      "fold": [
+        "Alcohol consumption 2009 NHMRC guidelines (exceeded lifetime risk)",
+        "Alcohol consumption 2020 guideline (exceeded guideline)",
+        "Total Overweight / Obese",
+        "Daily consumption of fruit and vegetables (did not meet recommendation)",
+        "High / Very High psychological distress",
+        "Current daily smoker",
+        "Physical activity guidelines (did not meet guideline)"
+      ],
+      "as": ["Indicator", "Value"]
+    },
+    {
+      "fold": [
+        "Alcohol consumption 2009 NHMRC guidelines (exceeded lifetime risk) Number",
+        "Alcohol consumption 2020 guideline (exceeded guideline) Number",
+        "Total Overweight / Obese Number",
+        "Daily consumption of fruit and vegetables (did not meet recommendation) Number",
+        "High / Very High psychological distress Number",
+        "Current daily smoker Number",
+        "Physical activity guidelines (did not meet guideline) Number"
+      ],
+      "as": ["Indicator Number", "Value Number"]
+    },
+    {
+      "joinaggregate": [
+      {"op": "min", "field": "Value", "as": "minVal"},
+      {"op": "max", "field": "Value", "as": "maxVal"}
+    ],
+    "groupby": ["Indicator"]
+    },
+    {
+      "calculate": "(datum.Value - datum.minVal) / (datum.maxVal - datum.minVal)",
+      "as": "NormRaw"
+    },
+    { "calculate": "clamp(datum.NormRaw, 0, 1)", "as": "Normalisation" }
+  ],
+  "layer": [
+    {
+      "mark": "rule",
+      "encoding": {
+        "x": {"field": "Indicator", "type": "nominal"},
+        "color": {"value": "#e5e7eb"}
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "point": {"filled": true, "size": 100}
+      },
+      "params": [
+        {"name":"stateSel",
+        "select":{
+          "type":"point",
+          "fields":["State"]
+        },
+          "bind":"legend"},
+        {"name":"stateSel",
+        "select":{
+          "type":"point",
+          "fields":["State"]
+        }}
+      ],
+      "encoding": {
+        "color": {"type": "nominal", "field": "State"},
+        "opacity": {"condition":{"param":"stateSel","value":1}, "value":0.10},
+        "detail": {"type": "nominal", "field": "State"},
+        "x": {
+          "type": "nominal",
+          "field": "Indicator",
+          "sort": [
+            "Alcohol consumption 2009 NHMRC guidelines (exceeded lifetime risk)",
+            "Alcohol consumption 2020 guideline (exceeded guideline)",
+            "Total Overweight / Obese",
+            "Daily consumption of fruit and vegetables (did not meet recommendation)",
+            "High / Very High psychological distress",
+            "Current daily smoker",
+            "Physical activity guidelines (did not meet guideline)"
+          ],
+          "axis": {
+          "title": "Indicator",
+          "titlePadding": 15,
+          "labelAngle": 0,
+          "labelBaseline": "middle",
+          "labelAlign": "center",
+          "labelPadding": 10,
+          "labelExpr": "({'Alcohol consumption 2009 NHMRC guidelines (exceeded lifetime risk)':'Alcohol 2009 (exceeded)','Alcohol consumption 2020 guideline (exceeded guideline)':'Alcohol 2020 (exceeded)','Daily consumption of fruit and vegetables (did not meet recommendation)':'Low fruit/veg','High / Very High psychological distress':'High psych distress','Physical activity guidelines (did not meet guideline)':'Physical inactivity','Current daily smoker':'Daily smoker','Total Overweight / Obese':'Overweight / Obese'}[datum.label] || datum.label)"
+        }
+        },
+        "y": {
+          "type": "quantitative",
+          "field": "Normalisation",
+          "scale": {"domain": [0, 1]},
+          "axis": {"title": "Scaled Value (0-1)", "grid": false}
+        },
+        "tooltip": [
+          {"field": "State", "title": "State"},
+          {"field": "Indicator"},
+          {"field": "Value", "title": "Actual Value (%)"},
+          {"field": "Value Number", "title": "Number of People ('000)"}
+        ]
+      }
+    }
+  ],
+  "config": {"view": {"stroke": null}}
+}
