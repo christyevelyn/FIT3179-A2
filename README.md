@@ -1,4 +1,4 @@
-# Diabetes in Australia: Interactive Data Dashboard
+# Diabetes in Australia
 
 An interactive dashboard that explores how diabetes affects Australians across states, age groups, sex and lifestyle factors, using public data from ABS and AIHW.
 
